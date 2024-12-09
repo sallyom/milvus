@@ -49,3 +49,7 @@ podman run --rm -d \
     quay.io/redhat-et/milvus:standalone-rhel94 \
     milvus run standalone
 ```
+
+### Run RAG application with milvus
+
+Follow [this example](../../../deployments/podman-kube-play/README.md) to deploy a local RAG application with standalone Milvus.
