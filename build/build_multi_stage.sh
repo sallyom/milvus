@@ -21,7 +21,7 @@ set -euo pipefail
 DOCKERFILE="${DOCKERFILE:-./build/multi-stage/cpu/ubi-rhel/Dockerfile}"
 IMAGE_ARCH="${IMAGE_ARCH:-amd64}"
 MILVUS_IMAGE_REPO="${MILVUS_IMAGE_REPO:-quay.io/redhat-et/milvus}"
-MILVUS_IMAGE_TAG="${MILVUS_IMAGE_TAG:-standalone-rhel94}"
+MILVUS_IMAGE_TAG="${MILVUS_IMAGE_TAG:-standalone-rhel9.5}"
 CONTAINER_CMD="${CONTAINER_CMD:-podman}"
 
 # RH distros package repos use x86_64 rather than amd64, and aarch64 rather than arm64

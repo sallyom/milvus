@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: milvus-standalone
-    image: quay.io/redhat-et/milvus:standalone-rhel94
+    image: quay.io/redhat-et/milvus:standalone-rhel9.5
     args: ["milvus", "run", "standalone"]
     env:
     - name: ETCD_DATA_DIR

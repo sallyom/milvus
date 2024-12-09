@@ -6,7 +6,7 @@ The following environment variables can be set for the build, shown here with de
 
 ```
 MILVUS_IMAGE_REPO="${MILVUS_IMAGE_REPO:-quay.io/redhat-et/milvus}"
-MILVUS_IMAGE_TAG="${MILVUS_IMAGE_TAG:-standalone-rhel94}"
+MILVUS_IMAGE_TAG="${MILVUS_IMAGE_TAG:-standalone-rhel9.5}"
 IMAGE_ARCH="${IMAGE_ARCH:-amd64}"
 RH_TARGETARCH="${RH_TARGETARCH:-x86_64}"
 BUILD_ARGS="${BUILD_ARGS:---build-arg TARGETARCH=${IMAGE_ARCH} --build-arg RH_TARGETARCH=${RH_TARGETARCH}}"
@@ -46,7 +46,7 @@ podman run --rm -d \
     --health-start-period=90s \
     --health-timeout=20s \
     --health-retries=3 \
-    quay.io/redhat-et/milvus:standalone-rhel94 \
+    quay.io/redhat-et/milvus:standalone-rhel9.5 \
     milvus run standalone
 ```
 

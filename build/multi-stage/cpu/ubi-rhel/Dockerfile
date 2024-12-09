@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/ubi:9.4-947.1717074712 as vcpkg-installer
+FROM registry.access.redhat.com/ubi9:9.5-1732804088 as vcpkg-installer
 
 RUN dnf install -y wget zip git gcc gcc-c++ cmake \
         dnf-plugins-core ninja-build \
@@ -22,7 +22,7 @@ RUN /opt/vcpkg/bootstrap-vcpkg.sh -disableMetrics && \
 
 
 #FROM nvcr.io/nvidia/cuda:12.4.1-devel-ubi9
-FROM registry.access.redhat.com/ubi9/ubi:9.4-947.1717074712 as builder
+FROM registry.access.redhat.com/ubi9:9.5-1732804088 as builder
 
 ARG RH_TARGETARCH
 ARG TARGETARCH
@@ -109,7 +109,7 @@ RUN cp /home/milvus/build/multi-stage/cpu/ubi-rhel/configs/* /home/milvus/config
 ENV CONAN_USER_HOME=/home/milvus/conan
 RUN make install
 
-FROM registry.access.redhat.com/ubi9/ubi:9.4-947.1717074712
+FROM registry.access.redhat.com/ubi9:9.5-1732804088
 
 ARG TARGETARCH
 ARG RH_TARGETARCH
